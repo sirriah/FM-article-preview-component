@@ -1,0 +1,241 @@
+$mobile: 375px;
+$desktop: 1440px;
+
+// Very Dark Grayish Blue: hsl(217, 19%, 35%)
+$dkGrayBlue: #48556a;
+// Desaturated Dark Blue: hsl(214, 17%, 51%)
+$desDkBlue: #6d7f97;
+// Grayish Blue: hsl(212, 23%, 69%)
+$grayishBlue: #9eafc2;
+// Light Grayish Blue: hsl(210, 46%, 95%)
+$ltGrayishBlue: #ecf2f8; 
+
+// Typography
+
+// Body Copy
+
+$fontSize: 13px;
+
+// Headings
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ECF2F8;
+}
+
+.container{
+    height: 800px;
+    font-family: 'Manrope', sans-serif;
+    font-size: $fontSize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article{
+    background-color: white;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+    border-radius: 10px;
+    max-width: 730px;
+    min-height: 280px;
+    display: flex;
+    overflow: visible;
+}
+
+.article-image{
+    width: 285px;
+    min-height: 280px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.article-content{
+    margin: 31px 40px;
+}
+
+.article-heading{
+    font-size: 20px;
+    color: $dkGrayBlue;
+    line-height: 28px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+    letter-spacing: 0.121875px;
+}
+
+.article-paragraph{
+    color: #6E8098;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: 0.121875px;
+}
+
+.article-footer{
+    position: relative;
+}
+
+.article-sign{
+    display: flex;
+    align-items: center;
+}
+
+.article-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.article-nameDate{
+    margin-left: 16px;
+}
+
+.article-name{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $fontSize;
+    line-height: 20px;
+    letter-spacing: 0.121875px;
+    font-weight: 600;
+    color: $dkGrayBlue;
+    
+}
+
+.article-date{
+    font-weight: 200;
+    color: $grayishBlue;
+}
+
+.article-share-container{
+    position: relative;
+    margin-left: auto;
+}
+
+.article-share-button{
+    
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#share-button{
+    background-color: $ltGrayishBlue;
+}
+
+#share-arrow{
+    fill: #6E8098;
+}
+
+.article-share-toggleMenu{
+    background-color: #48556A;
+    width: 248px;
+    height: 55px;
+    box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: $grayishBlue;
+    position: absolute;
+    top: -75px;
+    left: 225px;
+}
+
+.share-arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #48556A;
+    position: absolute;
+    top: 54px;
+}
+
+.article-social-icon{
+    margin-left: 16px;
+}
+
+@media only screen and (max-width: 870px){
+    
+    .article-share-toggleMenu{
+        display: flex;
+        position: absolute;
+      /*  top: 20;
+        left: 0;
+        right: 0%;
+        */
+
+        top: 0;
+        left: calc(0px - (730px - 100vw)/2);
+    }  
+
+    .share-arrow{
+        width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #48556A;
+        position: absolute;
+        top: 10px;
+        left: 247px;
+    }
+
+}
+
+@media only screen and (max-width: $mobile){
+    .article{
+        width: 327px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .article-image{
+       width: 100%;
+       height: 200px; 
+       border-radius: 10px 10px 0 0;
+    }
+
+    .article-content{
+        margin: 38px 32px 20px 32px;
+    }
+
+    .article-heading{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+
+    .article-paragraph{
+        margin-bottom: 32px;
+    }
+
+    .article-share-text{
+        padding-left: 32px;
+    }
+
+    .article-share-toggleMenu{
+        background-color: #48556A;
+        width: 327px;
+        height: 64px;
+        box-shadow: none;
+        border-radius: 0 0 10px 10px;
+        justify-content: left;
+        position: absolute;
+        top: -12px;
+        left: -32px;
+        
+    }
+
+    .arrow-down {
+        display: none;
+    }
+}

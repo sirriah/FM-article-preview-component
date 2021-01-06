@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Article preview component</title>
+
+  <script>
+    function toggleShareMenu() {
+      var toggle = document.getElementById("share-menu");
+      var shareButton = document.getElementById("share-button");
+      var shareArrow = document.getElementById("share-arrow");
+      
+      if(toggle.style.display === "none"){
+        toggle.style.display = "flex";
+        shareButton.style.backgroundColor = '#6E8098';
+        shareArrow.style.fill = "#ecf2f8";
+       
+      } else {
+        toggle.style.display = "none";
+        shareButton.style.backgroundColor = '#ecf2f8';
+        shareArrow.style.fill = "#6E8098";
+      }
+    }
+
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <article class="article" >
+      <img src="images/drawers.jpg" class="article-image" alt="green wardrobe with vase and pictures">
+      <div class="article-content">
+        <h1 class="article-heading">Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home</h1>
+        <p class="article-paragraph">Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</p>
+        <div class="article-footer">
+          <div class="article-share-toggleMenu" id="share-menu" style="display: none;">
+            <span class="article-share-text">Share</span>
+            <img src="images/icon-facebook.svg" class="article-social-icon" alt="facebook icon">
+            <img src="images/icon-twitter.svg" class="article-social-icon" alt="twitter icon">
+            <img src="images/icon-pinterest.svg" class="article-social-icon" alt="pinterest icon">
+            <div class="share-arrow"></div>
+          </div>
+          <div class="article-sign">
+            <img src="images/avatar-michelle.jpg" class="article-avatar" alt="profile picture of Michelle">
+              <div class="article-nameDate">
+                <h3 class="article-name">Michelle Appleton</h3>
+                <span class="article-date">28 Jun 2020</span>
+              </div>
+              <div class="article-share-container">
+                <button class="article-share-button" onclick="toggleShareMenu()" id="share-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" class="article-share-icon"><path id="share-arrow" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+                </button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>
